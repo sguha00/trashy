@@ -21,11 +21,12 @@ defmodule Trashy.PromotionsTest do
     end
 
     test "create_promotion/1 with valid data creates a promotion" do
-      valid_attrs = %{details: "some details", merchant: "some merchant"}
+      valid_attrs = %{details: "some details", merchant: "some merchant", instagram: "some instagram"}
 
       assert {:ok, %Promotion{} = promotion} = Promotions.create_promotion(valid_attrs)
       assert promotion.details == "some details"
       assert promotion.merchant == "some merchant"
+      assert promotion.instagram == "some instagram"
     end
 
     test "create_promotion/1 with invalid data returns error changeset" do
@@ -34,11 +35,12 @@ defmodule Trashy.PromotionsTest do
 
     test "update_promotion/2 with valid data updates the promotion" do
       promotion = promotion_fixture()
-      update_attrs = %{details: "some updated details", merchant: "some updated merchant"}
+      update_attrs = %{details: "some updated details", merchant: "some updated merchant", instagram: "some updated instagram"}
 
       assert {:ok, %Promotion{} = promotion} = Promotions.update_promotion(promotion, update_attrs)
       assert promotion.details == "some updated details"
       assert promotion.merchant == "some updated merchant"
+      assert promotion.instagram == "some updated instagram"
     end
 
     test "update_promotion/2 with invalid data returns error changeset" do

@@ -12,7 +12,8 @@ defmodule Trashy.PromotionsFixtures do
       attrs
       |> Enum.into(%{
         details: "some details",
-        merchant: "some merchant"
+        merchant: "some merchant",
+        instagram: "some instagram"
       })
       |> Trashy.Promotions.create_promotion()
 
