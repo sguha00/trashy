@@ -3,8 +3,8 @@ defmodule TrashyWeb.PromotionControllerTest do
 
   import Trashy.PromotionsFixtures
 
-  @create_attrs %{details: "some details", merchant: "some merchant"}
-  @update_attrs %{details: "some updated details", merchant: "some updated merchant"}
+  @create_attrs %{details: "some details", merchant: "some merchant", instagram: "some instagram"}
+  @update_attrs %{details: "some updated details", merchant: "some updated merchant", instagram: "some updated instagram"}
   @invalid_attrs %{details: nil, merchant: nil}
 
   describe "index" do

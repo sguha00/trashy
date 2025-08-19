@@ -31,6 +31,11 @@ defmodule TrashyWeb.CertificateLive do
                 <h4 class="text-xs text-white">
                   <%= promotion.promotion.details %>
                 </h4>
+                <%= if promotion.promotion.instagram do %>
+                  <h4 class="text-xs text-white">
+                    <%= promotion.promotion.instagram %>
+                  </h4>
+                <% end %>
               </div>
               <%= if promotion.is_claimed do %>
               <% else %>
@@ -60,6 +65,11 @@ defmodule TrashyWeb.CertificateLive do
                       <h4 class="text-xs text-white">
                         <%= promotion.promotion.details %>
                       </h4>
+                      <%= if promotion.promotion.instagram do %>
+                        <h4 class="text-xs text-white">
+                          <%= promotion.promotion.instagram %>
+                        </h4>
+                      <% end %>
                     </div>
                   </div>
                   <div class="flex flex-row justify-between py-6">
